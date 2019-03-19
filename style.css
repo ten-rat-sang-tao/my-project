@@ -1,0 +1,63 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: darkslategray;
+}
+
+.layout{
+    display: block;
+}
+
+h1 {
+    /* may be effected by other element's margin */
+    position: fixed;
+    width: 800px;
+    text-align: end;
+    text-align-last: center;
+    color: burlywood;
+    margin: 0px;
+    z-index: 1;
+    padding: 5px 0px;
+    height: 40px;
+    background-color: darkslategray;
+}
+
+.content {
+    position: relative;
+    width: 800px;
+    top: 50px;
+}
+
+p.relative {
+    /* Define element based on inside box positon */
+    /* position: relative;
+    top: 10px;
+    left: 100px; */
+    color: crimson;
+}
+
+p.absolute {
+    /* Define element based on window-size or outside element's position */
+    /* position: absolute;
+    left: 100px; */
+    color: cadetblue;
+    background-color: bisque;
+}
+
+/* p.float {
+    float: left;
+    padding-top: 0px;
+    text-align: right;
+} */
+
+p {
+    margin: 10px;
+    padding: 0px 5px;
+    width: 180px;
+}
+
+.group {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: burlywood;
+}
