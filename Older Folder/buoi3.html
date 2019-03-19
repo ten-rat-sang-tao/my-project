@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form{
+            display: block;
+            display: grid;
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid cadetblue;
+        }
+        span{
+            margin-bottom: 10px;
+        }
+        label{
+            width: 150px;
+            display: inline-block;
+            vertical-align: top;
+            }
+        h3{
+        padding: 10px 0px 10px 10px;
+        background-color: cadetblue;
+        color: white;
+        margin-bottom: 0px;
+        }
+        .section{
+            margin-left:auto; 
+            margin-right: auto; 
+            width: fit-content;
+        }
+        .section input[type="submit"]{
+            display: block;
+            width: fit-content;
+            text-align: center;
+            margin: 0px auto;
+        }
+        /* LAM TIEP DUOI DAY https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox */
+        .container{
+            display: block;
+            position: relative;
+            cursor: pointer;
+            padding-left: 175px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .container input{
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .checkmark{
+            position: absolute;
+            top: 0;
+            left: 150px;
+            height: 15px;
+            width: 15px;
+            border-radius: 5px;
+            background-color: blanchedalmond;
+        }
+
+        .container:hover input ~ .checkmark{
+            background-color: burlywood;
+        }
+
+        .container input:checked ~ .checkmark{
+            background-color:cornflowerblue;
+        }
+        .checkmark::after{
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .container input:checked ~ .checkmark::after{
+            display: block;
+        }
+
+        .container .checkmark::after {
+        left: 4px;
+        top: 0px;
+        width: 4px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+}
+    </style>
+</head>
+<body>
+    <div style="position: relative">
+        <div class="section">
+                <h3>Personal Information</h3>
+                <form class="form-1" id="form-1" action="" method="">
+                        <span>
+                            <label>Username:</label>
+                            <input type="text" placeholder="Input Here" name="username" required>
+                        </span>
+                        <span>
+                            <label>Password:</label>
+                            <input type="text" name="password" placeholder="Input Password" required>
+                        </span>
+                        <span>
+                                <label>Email Address:</label>
+                                <input type="email" name="email" placeholder="Input Your Email Address" required>
+                        </span>
+                        <span>
+                            <label>Your Gender:</label>
+                            <label class="container" for="male">
+                                <input type="radio" name="gender" id="male" value="1">Male
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container" for="female">
+                                <input type="radio" name="gender" id="female" value="2">Female
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container" for="other">
+                                <input type="radio" name="gender" id="other" value="3">Other
+                                <span class="checkmark"></span>
+                            </label>
+                        </span>
+                    </form>
+
+                    <h3>Other Information</h3>
+                    <form class="form-2" id="form-2">
+                        
+                        <span>
+                                <label>Why you want to sign in?</label>
+                                <textarea name="comment" id="" cols="25" rows="10"></textarea>
+                        </span>
+                        <span>
+                            <label>Interested in:</label>
+                            <input type="checkbox" name="love-interest" value="11">Male
+                            <input type="checkbox" name="love-interest" value="22">Female
+                            <input type="checkbox" name="love-interest" value="33">Trans
+                        </span>
+                        <span>
+                            <label>Current Relationship Status</label>
+                            <select name="rela-status">
+                                <option value="" disabled selected hidden>Please choose one</option>
+                                <option value="11">Open Relationship</option>
+                                <option value="22">In Relationship</option>
+                                <option value="33">Married</option>
+                                <option value="44">Divorced</option>
+                            </select>
+                        </span>
+                        <span>
+                            <label>Where do you want to go for a date?</label>
+                            <select name="date-spot" multiple>
+                                <option value="11">Restaurant</option>
+                                <option value="22">Theater</option>
+                                <option value="33">Playground</option>
+                                <option value="33">Other</option>
+                        </select>
+                        </span>
+                            <input type="submit" value="Click here to submit">
+                    </form>
+        </div>
+    </div>
+</body>
+</html>
