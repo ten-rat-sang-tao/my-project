@@ -1,0 +1,115 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav li {
+    display: inline;
+    list-style: none;
+    font-weight: 500;
+    margin-right: 30px;    
+}
+
+.app-header{
+    background-image: url(./backgroung.png);
+    margin: 0px;
+    height: 100px;
+}
+
+.app-header img{
+    height: inherit;
+}
+
+nav {
+    position: relative;
+    background-color: darkgray;
+    height: 30px;
+    box-shadow: 0px 1px 1px grey;
+}
+
+nav ul {
+    margin: auto 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: rotateY(-50%);
+}
+
+footer{
+    background-color: darkgray;
+    height: 30px;
+}
+
+footer span {
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.article-list{
+    height: inherit;
+    width: 80vw;
+    border-right: 1px solid rgba(168, 168, 168, 0.7);
+}
+
+article{
+    display: flex;
+    margin: 0px 20px 40px 20px;
+}
+
+.article-list article:last-child {
+    margin-bottom: 20px;
+}
+
+.article-list article:first-child {
+    margin-top: 20px;
+}
+
+.img-box {
+    box-sizing: border-box;
+    height: inherit;
+    border: 1px solid rgba(168, 168, 168, 0.7);
+    padding: 10px;
+}
+
+.img-box img{
+    width: 350px;
+    height: 260px;
+}
+
+.content-box {
+    height: inherit;
+    width: auto;
+    padding: 10px;
+}
+
+h1 {
+    font-size: x-large;
+}
+
+h2 {
+    font-size: large;
+    font-weight: normal;
+    padding-bottom: 15px;
+    color:deeppink;
+}
+
+aside {
+    height: inherit;
+    width: 20vw;
+    background-color: blanchedalmond;
+}
+
+.content {
+    display: inline-flex;
+}
