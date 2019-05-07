@@ -10,15 +10,16 @@ $(document).ready(function () {
     $('input:button').click(function () {
         // $('#para').text('You clicked button 1');
         // $('#para').css("display","block");
-        $('body').append('<div class="resultPara" id="result"></div>');
+        $('.container').append('<div class="resultPara" id="result"></div>');
 
         if ($('result').length == 0) {
-            var rightBtn = Math.floor(Math.random() * 10) + 1;
+            var rightBtn = Math.floor(Math.random() * 5) + 1;
         }
-
-        $('input:button').prop('hidden', true);
-
         console.log(rightBtn);
+
+        // $('input:button').prop('hidden', true);
+        $('input:button').remove();
+
 
         if (this.id == 'btn-' + rightBtn) {
             $('#result').text("Congratulation! You are lucky");
